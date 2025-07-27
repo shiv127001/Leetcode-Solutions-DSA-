@@ -9,17 +9,11 @@ public:
             sum = 0;
             for(int j=i;j<n;++j)
             {
-            sum = sum+nums[j];
-            //int a = nums[i]
-            if(sum == k)
-            {
-                count += 1;
-                // sum = 0;
-            }
-            // if (sum>k)
-            // {
-            //     sum = 0;
-            // }
+                sum = sum+nums[j];
+                if(sum == k)
+                {
+                 count += 1;
+                }
             }
         }
         return count;
