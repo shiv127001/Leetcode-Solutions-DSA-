@@ -18,8 +18,9 @@ public:
         // }
         // return max_area;
 
-        // METHOD 2 OPTIMAL (USIGN 2 POINTER APPROACH)
-        int i,left,right,length,breadth,max_area = 0,area;
+        // //METHOD 2 OPTIMAL (USIGN 2 POINTER APPROACH)
+        int i,left,right;
+        int length,breadth,max_area = 0,area;
         left = 0;right = height.size()-1;
         while(left<right)
         {
