@@ -3,6 +3,7 @@ public:
     int findDuplicate(vector<int>& nums) {
         
         // // optimal
+        
 
         // // better
         int i,cnt,n=nums.size(), result;
