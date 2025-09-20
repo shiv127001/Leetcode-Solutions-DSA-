@@ -5,13 +5,11 @@ public:
         set<char> st(s.begin(), s.end());
         for(int i = 0; i < s.size(); ++i){
             char ch = s[i];
-            if((isupper(ch) && st.find(tolower(ch)) == st.end()) || 
-               (islower(ch) && st.find(toupper(ch)) == st.end())) {
-
-                string left = longestNiceSubstring(s.substr(0,i));
-                string right = longestNiceSubstring(s.substr(i+1));
-
-                return left.size() >= right.size() ? left : right;
+            if((isupper(ch)&&st.find(tolower(ch))==st.end())||(islower(ch)&&st.find(toupper(ch))==st.end())) 
+               {
+                    string left = longestNiceSubstring(s.substr(0,i));
+                    string right = longestNiceSubstring(s.substr(i+1));
+                    return left.size() >= right.size() ? left : right;
             }
         }
         return s;
