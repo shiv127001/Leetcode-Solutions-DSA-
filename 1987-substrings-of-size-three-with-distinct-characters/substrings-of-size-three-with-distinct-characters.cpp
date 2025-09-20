@@ -1,9 +1,10 @@
 class Solution {
 public:
-    int uptok(string s,int k)
-    {
+    int countGoodSubstrings(string s) {
+        int n=s.size();
+        if(n < 3) return 0;
         map<char,int>mpp;
-        int l=0,r=0,cnt=0, n=s.size();
+        int l=0,r=0,cnt=0;
         while(r<n)
         {
             mpp[s[r]]++;
@@ -17,12 +18,5 @@ public:
             r++;
         }
         return cnt;
-
-    }
-    int countGoodSubstrings(string s) {
-        int k=3;
-        int n=s.size();
-        if(n < 3) return 0;
-        return (uptok(s,k));
     }
 };
