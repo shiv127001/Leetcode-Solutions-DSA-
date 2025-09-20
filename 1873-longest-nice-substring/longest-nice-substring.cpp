@@ -1,10 +1,8 @@
 class Solution {
 public:
     string longestNiceSubstring(string s) {
-        if(s.size() < 2) return "";
-
+        if(s.size() <=1 ) return "";
         set<char> st(s.begin(), s.end());
-
         for(int i = 0; i < s.size(); ++i){
             char ch = s[i];
             if((isupper(ch) && st.find(tolower(ch)) == st.end()) || 
@@ -16,7 +14,6 @@ public:
                 return left.size() >= right.size() ? left : right;
             }
         }
-
         return s;
     }
 };
