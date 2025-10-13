@@ -13,9 +13,8 @@ public:
         vector<int>res;
         for(int k=0;k<mpp.size();++k)
         {
-            if(k%2==0) {
+            if(k%2==0) 
                 reverse(mpp[k].begin(),mpp[k].end());
-            }
             for(int val: mpp[k]) {
                 res.push_back(val);
             }
