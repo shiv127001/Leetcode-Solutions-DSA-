@@ -14,7 +14,7 @@ public:
         if(coins[index]<=target) pick = 1+f(coins,n,target-coins[index],dp,index);
         return dp[index][target] = min(pick,n_pick);
     }
-
+ 
     int coinChange(vector<int>& coins, int amount) {
         int N = coins.size();
         vector<vector<int>> dp(N,vector<int>(amount+1,-1));
